@@ -1,18 +1,28 @@
 import React from "react";
 import { View, Text } from "react-native";
+import PropsTypes from "prop-types";
 import styled from "styled-components/native";
+
 import { Colors } from "../theme";
 
-const Section = () => {
+const Section = ({
+  title = "Section Default Title",
+  description = "Section Default Description"
+}) => {
   return (
     <Container>
-      <Title>Learn More</Title>
-      <Description>Read the docs to discover what to do next:</Description>
+      <Title>{title}</Title>
+      <Description>{description}</Description>
     </Container>
   );
 };
 
 export default Section;
+
+Section.PropsTypes = {
+  title: PropsTypes.string.isRequired,
+  description: PropsTypes.node.isRequired
+};
 
 const Container = styled(View)`
   margin-top: 32;
