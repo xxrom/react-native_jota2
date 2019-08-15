@@ -1,9 +1,10 @@
 import React, { Fragment } from "react";
 import { SafeAreaView, ScrollView, View, Text, StatusBar } from "react-native";
-import { Header, DebugInstructions } from "react-native/Libraries/NewAppScreen";
+import { DebugInstructions } from "react-native/Libraries/NewAppScreen";
 import styled from "styled-components/native";
 
 import Section from "./components/Section";
+import Header from "./components/Header";
 import { Colors } from "./theme";
 
 const App = () => {
@@ -12,7 +13,7 @@ const App = () => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollViewStyled contentInsetAdjustmentBehavior="automatic">
-          <Header />
+          <Header label="Clinks" backgroundSource={require("./full.jpg")} />
           <Body>
             <Section title="Learn More" description="read doc =)  " />
             <Section
